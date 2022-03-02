@@ -6,8 +6,8 @@ variable "amount" {
 
 variable "tags" {
   description = "Network Tag utilizadas pelas instancias"
-  type        = string
-  default     = "web"
+  type        = list
+  default     = []
 }
 
 variable "name" {

@@ -4,6 +4,7 @@ resource "google_compute_instance" "this" {
   name         = format("%s-%d", var.name, count.index)
   machine_type = var.machine_type
   zone         = var.zone
+  tags  = var.tags
 
   metadata = {
     ssh-keys = join("\n", [for key in var.ssh_keys : "${key.user}:${key.publickey}"])
