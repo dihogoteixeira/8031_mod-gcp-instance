@@ -4,6 +4,12 @@ variable "amount" {
   default     = 1
 }
 
+variable "tags" {
+  description = "Network Tag utilizadas pelas instancias"
+  type        = string
+  default     = "web"
+}
+
 variable "name" {
   description = "Nome da instância"
   type        = string
